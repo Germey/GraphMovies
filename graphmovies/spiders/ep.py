@@ -6,7 +6,7 @@ from copy import deepcopy
 
 
 class MovieSpider(Spider):
-    name = 'movie'
+    name = 'ep'
     allowed_domains = ['www.graphmovies.com']
     start_urls = ['http://www.graphmovies.com/']
     
@@ -43,7 +43,7 @@ class MovieSpider(Spider):
     }
     
     data = {
-        'type': 'movie',
+        'type': 'ep',
         't': '0',
         'sort': '1',
         # 'tag': '0',

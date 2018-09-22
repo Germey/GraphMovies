@@ -32,7 +32,7 @@ class MongoPipeline(object):
     
     def _process_item(self, item, spider):
         print('Storeing...')
-        self.db['movies'].update({'orkey': item.get('orkey')}, {'$set': item}, True)
+        self.db[spider.name].update({'orkey': item.get('orkey')}, {'$set': item}, True)
         return item
     
     def process_item(self, item, spider):
